@@ -3,7 +3,22 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+
+    apiKey: "AIzaSyCQCa7R2AfsovhB4tPSar36vLAo4u76fTc",
+  
+    authDomain: "typescript-angular-belatrix.firebaseapp.com",
+  
+    projectId: "typescript-angular-belatrix",
+  
+    storageBucket: "typescript-angular-belatrix.appspot.com",
+  
+    messagingSenderId: "464563491240",
+  
+    appId: "1:464563491240:web:2f01613404e89f2e1c8d9d"
+  
+  }
 };
 
 /*
