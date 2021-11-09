@@ -9,7 +9,7 @@ import { TeamService } from '../services/teamservice.service';
   styleUrls: ['./team-table.component.scss']
 })
 export class TeamTableComponent implements OnInit {
-  Teams: Team[];
+  Teams!: Team[];
 
   constructor(private teamService: TeamService) { }
 
