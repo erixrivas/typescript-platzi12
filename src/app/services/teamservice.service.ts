@@ -1,42 +1,42 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { player } from '../interfaces/player';
+import { Team } from '../interfaces/team';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PlayerService {
+export class TeamService {
  
   constructor(private firestore: AngularFirestore) {
   
   }
-  createPlayer(data: any) {
+  createTeam(data: any) {
     return new Promise<any>((resolve, reject) =>{
         this.firestore
-            .collection("players")
+            .collection("teams")
             .add(data)
             .then(res => {}, err => reject(err));
     });
   }
 
 
-  getPlayers() { 
-    return 
-     this.firestore.collection("players").snapshotChanges();
+  getTeams()    { 
+    return this.firestore.collection("teams").snapshotChanges();
+     
   }
 
-  updatePlayers(data:any) {
+  updateTeams(data:any) {
     return
         this.firestore
-        .collection("players")
+        .collection("teams")
         .doc(data.payload.doc.id)
         .set({ completed: true }, { merge: true });
  }
 
- deletePlayers(data:any) {
+ deleteTeams(data:any) {
   return
       this.firestore
-      .collection("players")
+      .collection("teams")
       .doc(data.payload.doc.id)
       .delete();
 }
