@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Team } from '../interfaces/team';
+export const TeamsTableHeaders = ['Name', 'Country', 'Players'];
 
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class TeamService {
  
   constructor(private firestore: AngularFirestore) {

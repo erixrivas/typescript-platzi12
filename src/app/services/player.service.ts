@@ -21,8 +21,7 @@ export class PlayerService {
 
 
   getPlayers() { 
-    return 
-     this.firestore.collection("players").snapshotChanges();
+    return      this.firestore.collection("players").snapshotChanges();
   }
 
   updatePlayers(data:any) {

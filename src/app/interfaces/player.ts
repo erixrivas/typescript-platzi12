@@ -2,12 +2,13 @@ import { Country } from "./country";
 import { SquadNumber } from "./squadNumber";
 
 export interface player{
-    $key?:string;
+    id:string;
     name:string;
     lastName:string;
     position:SquadNumber;
-    heigth:number;
-    weigth:number;
-    leftfooted:boolean;
+    height:number;
+    weight:number;
+    leftFooted:boolean;
     nationality:Country;
 }
+
